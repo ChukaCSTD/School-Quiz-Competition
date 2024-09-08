@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+
+    <div class="container mx-auto p-16">
+        <div class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Registration Header -->
+            <div class="text-center bg-blue-600 text-white py-4">
+                <h1 class="text-2xl font-bold">Lumen et Veritas International Academy</h1>
+                <h2 class="text-lg">Quiz Competition Registration</h2>
+            </div>
+
+            <div class="p-6">
+                <p id="deadline-message" class="text-red-500 text-center mb-4"></p>
+
+                <!-- Registration Form -->
+                <form id="registration-form" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">School Name</label>
+                        <input type="text" id="school-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Enter school name" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Candidate Name</label>
+                        <input type="text" id="candidate-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Enter candidate name" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Student ID (Password)</label>
+                        <input type="text" id="student-id" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Enter student ID" required>
+                    </div>
+
+                    <!-- Fine display if past deadline -->
+                    <div id="fine-message" class="text-red-500 hidden">Late Registration Fee: N5,000. <br> Access Bank: 0719159765. <br> Account Name: Lumen et Veritas International Academy</div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline">Register</button>
+                </form>
+
+                <!-- Done Button -->
+                <div class="mt-4">
+                    <button id="done-button" class="w-full bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-600 focus:outline-none focus:shadow-outline">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>
