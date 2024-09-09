@@ -3,30 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Game</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Quiz Competition</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('images/pencil-eraser-paper-clip-with-blue-card-paper-white-backdrop.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .content-wrapper {
+            background-color: rgba(255, 255, 255, 0.0);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 flex justify-center items-center h-screen">
-    <div class="w-full max-w-md bg-white border p-6 rounded shadow-lg">
-        <div class="flex justify-between mb-4">
-            <div class="font-bold text-lg" id="schoolName"></div>
-            <div class="font-bold text-lg" id="studentName"></div>
-            <div class="font-bold text-lg">Elapsed Time <span id="timer">2:00</span></div>
-        </div>
-        
-        <div id="quizContainer">
-            <div class="font-semibold text-center mb-6" id="question"></div>
+<body class="font-sans antialiased">
+    <div class="container mx-auto p-6 pl-48 min-h-screen flex items-center justify-center">
+        <div class="content-wrapper w-full max-w-2xl">
+            <h1 class="text-3xl font-bold mb-4 text-center">Lumen et Veritas International Academy Quiz Competition</h1>
+            
+            <div class="w-full bg-white border p-6 rounded shadow-lg">
+                <div class="flex justify-between mb-4">
+                    <div class="font-bold text-lg" id="schoolName"></div>
+                    <div class="font-bold text-lg" id="studentName"></div>
+                    <div class="font-bold text-lg">Elapsed Time <span id="timer">2:00</span></div>
+                </div>
+                
+                <div id="quizContainer">
+                    <div class="font-semibold text-center mb-6" id="question"></div>
 
-            <div id="options" class="space-y-2"></div>
+                    <div id="options" class="space-y-2"></div>
 
-            <button onclick="submitAnswer()" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded w-full">Submit</button>
-        </div>
+                    <button onclick="submitAnswer()" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded w-full">Submit</button>
+                </div>
 
-        <div id="result" class="hidden text-center font-semibold text-lg mt-6"></div>
-        
-        <div id="endQuizButtons" class="hidden mt-4 space-y-2">
-            <a href="pastwinners.html" class="block w-full bg-blue-500 text-white text-center px-4 py-2 rounded">View Past Winners</a>
-            <button onclick="restartQuiz()" class="w-full bg-green-500 text-white px-4 py-2 rounded">Restart Quiz</button>
+                <div id="result" class="hidden text-center font-semibold text-lg mt-6"></div>
+                
+                <div id="endQuizButtons" class="hidden mt-4 space-y-2">
+                    <a href="pastwinners.html" class="block w-full bg-blue-500 text-white text-center px-4 py-2 rounded">View Past Winners</a>
+                    <button onclick="restartQuiz()" class="w-full bg-green-500 text-white px-4 py-2 rounded">Restart Quiz</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -39,9 +58,9 @@
 
         let questions = [
             {
-                question: "What is the name of the tallest mountain in the world?",
-                options: ["Kilimanjaro", "Ararat", "Everest", "Mount Olive"],
-                correctAnswer: "Everest"
+                question: "Who lives in a pineapple under the sea?",
+                options: ["Patrick", "SpongeBob SquarePants", "Squidward", "Mr Krabs"],
+                correctAnswer: "SpongeBob SquarePants"
             },
             {
                 question: "Which planet is closest to the Sun?",
@@ -49,18 +68,18 @@
                 correctAnswer: "Mercury"
             },
             {
-                question: "What is the capital city of France?",
-                options: ["Berlin", "Madrid", "Paris", "Rome"],
-                correctAnswer: "Paris"
+                question: "What holiday is celebrated on October 31st?",
+                options: ["Cinco De Mayo", "Independence Day", "Halloween", "Thanksgiving"],
+                correctAnswer: "Halloween"
             },
             {
-                question: "Who wrote 'Hamlet'?",
-                options: ["Charles Dickens", "William Shakespeare", "J.K. Rowling", "Jane Austen"],
-                correctAnswer: "William Shakespeare"
+                question: "Who is the mother of all murder mystery novels?",
+                options: ["Charles Dickens", "William Shakespeare", "J.K. Rowling", "Agatha Christie"],
+                correctAnswer: "Agatha Christie"
             },
             {
                 question: "Which element has the chemical symbol O?",
-                options: ["Oxygen", "Gold", "Osmium", "Oxide"],
+                options: ["Oxygen", "Gold", "Opium", "Oxide"],
                 correctAnswer: "Oxygen"
             },
             {
@@ -79,14 +98,14 @@
                 correctAnswer: "300,000 km/s"
             },
             {
-                question: "Which planet is known as the Red Planet?",
-                options: ["Mars", "Saturn", "Jupiter", "Venus"],
-                correctAnswer: "Mars"
+                question: "Who is known as the inventor of the light bulb?",
+                options: ["Nikola Tesla", "Nikki Laoye", "Benjamin Franklin", "Thomas Edison"],
+                correctAnswer: "Thomas Edison"
             },
             {
-                question: "What is the longest river in the world?",
-                options: ["Amazon", "Nile", "Yangtze", "Mississippi"],
-                correctAnswer: "Nile"
+                question: "What is the name of the Greek goddess of wisdom?",
+                options: ["Athena", "Hera", "Aphrodite", "Demeter"],
+                correctAnswer: "Athena"
             }
         ];
 
