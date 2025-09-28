@@ -1,6 +1,6 @@
 // register.js
 
-// Registration deadline (1st of October)
+// Registration deadline (change the new Date to whatever you like)
 const registrationDeadline = new Date('September 29, 2025');
 const currentDate = new Date();
 
@@ -13,7 +13,7 @@ if (currentDate > registrationDeadline) {
     fineMessage.classList.remove('hidden');
 } else {
     const daysLeft = Math.ceil((registrationDeadline - currentDate) / (1000 * 60 * 60 * 24));
-    deadlineMessage.innerText = `Registration closes in ${daysLeft} days.`;
+    deadlineMessage.innerText = `Registration closes in T minus ${daysLeft} day(s).`;
 }
 
 // Handle form submission and save to localStorage
