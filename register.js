@@ -9,7 +9,7 @@ const deadlineMessage = document.getElementById('deadline-message');
 const fineMessage = document.getElementById('fine-message');
 
 if (currentDate > registrationDeadline) {
-    deadlineMessage.innerText = "Registration is closed. A fine of N5,000 is required to be eligible. Find remit details below.";
+    deadlineMessage.innerText = `<p class="text-sm">Registration is closed. A fine of N5,000 is required to be eligible. Find remit details below.</p>`;
     fineMessage.classList.remove('hidden');
 } else {
     const daysLeft = Math.ceil((registrationDeadline - currentDate) / (1000 * 60 * 60 * 24));
