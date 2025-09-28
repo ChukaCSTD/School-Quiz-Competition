@@ -1,7 +1,7 @@
 // register.js
 
 // Registration deadline (change the new Date to whatever you like)
-const registrationDeadline = new Date('October 29, 2025');
+const registrationDeadline = new Date('October 29, 2024');
 const currentDate = new Date();
 
 // Display deadline message and fine if past deadline
@@ -13,7 +13,7 @@ if (currentDate > registrationDeadline) {
     fineMessage.classList.remove('hidden');
 } else {
     const daysLeft = Math.ceil((registrationDeadline - currentDate) / (1000 * 60 * 60 * 24));
-    deadlineMessage.innerText = `Registration closes in T minus ${daysLeft} day(s).`;
+    deadlineMessage.innerText = `Registration closes in T-minus ${daysLeft} day(s).`;
 }
 
 // Handle form submission and save to localStorage
