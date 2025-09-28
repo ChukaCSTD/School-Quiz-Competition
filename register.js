@@ -1,7 +1,7 @@
 // register.js
 
 // Registration deadline (change the new Date to whatever you like)
-const registrationDeadline = new Date('September 29, 2025');
+const registrationDeadline = new Date('October 29, 2025');
 const currentDate = new Date();
 
 // Display deadline message and fine if past deadline
